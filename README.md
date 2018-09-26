@@ -25,8 +25,8 @@ Visit the site in your browser at http://localhost:8000
 
 ### Link to access website:
 
-https://webpagearshi.github.io/Restaurant-Review-App/.
-
+ https://webpagearshi.github.io/restaurant-review/.
+ 
 ## Leaflet.js and Mapbox:
 
 This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/).Used a token from [Mapbox](https://www.mapbox.com/). Mapbox is free to use, and does not require any payment information. 

@@ -25,7 +25,7 @@ Visit the site in your browser at http://localhost:8000
 
 ### Link to access website:
 
- https://webpagearshi.github.io/restaurant-review/.
+ https://webpagearshi.github.io/service-worker/
  
 ## Leaflet.js and Mapbox:
 

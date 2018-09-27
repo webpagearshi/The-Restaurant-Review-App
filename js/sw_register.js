@@ -1,5 +1,5 @@
 
-if ('serviceWorker' in navigator) {
+/*if ('serviceWorker' in navigator) {
   window.addEventListener('load', function(){
     navigator.serviceWorker.register('sw.js').then(function(registration) {
       // Registration was successful
@@ -10,4 +10,14 @@ if ('serviceWorker' in navigator) {
     });
   } else {
 	console.log("no service worker in this browser");
+}*/
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker/sw.js', {scope: '/service-worker/'})
+  .then(function(reg) {
+    // registration worked
+    console.log('Registration succeeded. Scope is ' + reg.scope);
+  }).catch(function(error) {
+    // registration failed
+    console.log('Registration failed with ' + error);
+  });
 }

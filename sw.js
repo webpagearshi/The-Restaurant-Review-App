@@ -1,5 +1,13 @@
 let CACHE_VERSION = 'restaurant-app-static-v1';
-let CACHE_FILES = [
+
+
+//installing the service worker
+self.addEventListener('install', function(event) {
+    event.waitUntil(
+        caches.open(CACHE_VERSION)
+        .then(function(cache) {
+            console.log('Opened cache');
+            return cache.addAll([
     './',
     './css/styles.css',
     './index.html',
@@ -20,16 +28,7 @@ let CACHE_FILES = [
     './img/8.jpg',
     './img/9.jpg',
     './img/10.jpg'
-];
-
-
-//installing the service worker
-self.addEventListener('install', function(event) {
-    event.waitUntil(
-        caches.open(CACHE_VERSION)
-        .then(function(cache) {
-            console.log('Opened cache');
-            return cache.addAll(CACHE_FILES);
+]);
         })
     );
 });

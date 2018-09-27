@@ -3,6 +3,7 @@ let CACHE_FILES = [
     './',
     './css/styles.css',
     './index.html',
+    './sw.js',
     './restaurant.html',
     './js/main.js',
     './js/restaurant_info.js',

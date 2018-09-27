@@ -1,14 +1,4 @@
-	
-//registering service worker
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js')
-        .then(function(registration) {
-            console.log('Registration worked!,scope is:', registration.scope);
-        })
-        .catch(function(error) {
-            console.log('Registration failed!,so sad', error);
-        });
-}
+
 /*if ('serviceWorker' in navigator) {
   window.addEventListener('load', function(){
     navigator.serviceWorker.register('sw.js').then(function(registration) {
@@ -21,3 +11,12 @@ if ('serviceWorker' in navigator) {
   } else {
 	console.log("no service worker in this browser");
 }*/
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.register('./sw.js')
+	.then(function() {
+		console.log('Registration worked!');
+	})
+	.catch(function() {
+		console.log('Registration failed!,I want to cry');
+	});
+}

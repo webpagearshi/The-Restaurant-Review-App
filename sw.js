@@ -116,7 +116,7 @@ self.addEventListener('activate', function(event) {
          });
         return response;
       });*/
-self.addEventListener('fetch', function(event) {
+/*self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.open('restaurant-app-static-v1').then(function(cache) {
       return cache.match(event.request).then(function (response) {
@@ -125,6 +125,13 @@ self.addEventListener('fetch', function(event) {
           return response;
         });
       });
+    })
+  );
+});*/
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request).then(function(response) {
+      return response || fetch(event.request);
     })
   );
 });

@@ -54,13 +54,13 @@ self.addEventListener('fetch', function(event) {
   var requestUrl = new URL(event.request.url);
 
   if (requestUrl.origin === location.origin) {
-    if (requestUrl.pathname === '/') {
-      event.respondWith(caches.match('/'));
+    if (requestUrl.pathname === './') {
+      event.respondWith(caches.match('./'));
       return;
     }
 
-    if (requestUrl.pathname === '/restaurant.html') {
-      event.respondWith(caches.match('/restaurant.html'));
+    if (requestUrl.pathname === 'service-worker/restaurant.html') {
+      event.respondWith(caches.match('service-worker/restaurant.html'));
       return;
     }
   }

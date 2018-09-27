@@ -11,12 +11,14 @@
   } else {
 	console.log("no service worker in this browser");
 }*/
+/* Set up service worker */
 if ('serviceWorker' in navigator) {
-	navigator.serviceWorker.register('sw.js')
-	.then(function() {
-		console.log('Registration worked!');
-	})
-	.catch(function() {
-		console.log('Registration failed!,I want to cry');
-	});
+  navigator.serviceWorker
+  .register('/sw.js', {scope: "/"})
+    .then(reg => {
+      console.log('Service Worker Registration Successful: ' + reg.scope);
+    })
+    .catch(error => {
+      console.log('Service Worker Registration Failed:I am crying ' + error);
+    });
 }

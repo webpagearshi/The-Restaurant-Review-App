@@ -94,7 +94,7 @@ self.addEventListener('fetch', function(event) {
             // to clone it so we have two streams.
             var responseToCache = response.clone();
 
-            caches.open(CACHE_VERSION)
+            caches.open('restaurant-app-static-v1')
               .then(function(cache) {
                 cache.put(event.request, responseToCache);
               });

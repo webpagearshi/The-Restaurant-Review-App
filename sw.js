@@ -51,7 +51,7 @@ self.addEventListener('activate', function(event) {
 
 //fetch event is fired
 
-/*self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', function(event) {
     event.respondWith(
         caches.match(event.request).then(function(resp) {
             return resp || fetch(event.request).then(function(response) {
@@ -65,7 +65,7 @@ self.addEventListener('activate', function(event) {
         })
     );
 });
-*/
+
 
 /*self.addEventListener('fetch', function(event) {
   event.respondWith(
@@ -128,10 +128,3 @@ self.addEventListener('activate', function(event) {
     })
   );
 });*/
-self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.match(event.request).then(function(response) {
-      return response || fetch(event.request);
-    })
-  );
-});
